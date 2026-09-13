@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Grande | Premium Cafe in Udumalpet</title>
+<meta name="description" content="Cafe Grande offers a premium dining experience in Udumalpet. Discover our delicious menu of continental cuisine, pizza, burgers, waffles, and more. Dine-in, takeaway, and delivery available.">
+<meta property="og:title" content="Cafe Grande | Premium Cafe in Udumalpet">
+<meta property="og:description" content="Good Food. Good Taste. Good Mood. Delicious food, refreshing drinks and indulgent desserts in the heart of Udumalpet.">
+<meta property="og:image" content="images/hero_cafe_bg.jpg">
+<meta property="og:type" content="restaurant.restaurant">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Cafe Grande",
+  "image": "images/hero_cafe_bg.jpg",
+  "telephone": "+917010615554",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Taj Complex, 28/3, Udumalpet - Dharapuram Rd, opposite MP Lodge",
+    "addressLocality": "Udumalaipettai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "642126",
+    "addressCountry": "IN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "60"
+  },
+  "priceRange": "₹1-200",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "12:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "16:00",
+      "closes": "22:00"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Color Palette */
+    --primary: #2C1A14; /* Deep Espresso */
+    --secondary: #FDF9F1; /* Warm Cream */
+    --accent: #D47B36; /* Caramel / Burnt Orange */
+    --accent-hover: #B86729;
+    --text-dark: #1F1511;
+    --text-light: #7A6960;
+    --border: rgba(44, 26, 20, 0.1);
+    --border-light: rgba(253, 249, 241, 0.15);
+    
+    /* Typography */
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 70px; /* Space for mobile action bar */
+  }
+
+  @media(min-width: 768px) {
+    body { padding-bottom: 0; }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--primary);
+  }
+
+  a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+  ul { list-style: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+  img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Utilities */
+  .section-padding { padding: 100px 0; }
+  .text-center { text-align: center; }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    gap: 8px;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(212, 123, 54, 0.3);
+  }
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 123, 54, 0.4);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+  }
+  .btn-outline:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+
+  .btn-outline-dark {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  .btn-outline-dark:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+
+  /* Navigation */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s ease;
+    background: transparent;
+    padding: 20px 0;
+  }
+  header.scrolled {
+    background: rgba(253, 249, 241, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary);
+    transition: color 0.4s ease;
+  }
+  header.scrolled .logo { color: var(--primary); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+  }
+  
+  header.scrolled .nav-links a { color: var(--text-dark); }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta { display: none; }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: all 0.3s;
+  }
+  header.scrolled .menu-toggle span { background-color: var(--primary); }
+
+  /* Mobile Nav */
+  @media(min-width: 768px) {
+    .nav-cta { display: block; }
+  }
+  @media(max-width: 991px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--secondary);
+      flex-direction: column;
+      justify-content: center;
+      transition: right 0.4s ease;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    }
+    .nav-links.active { right: 0; }
+    .nav-links a { color: var(--primary) !important; font-size: 1.2rem; }
+    .menu-toggle { display: flex; z-index: 101; }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background-color: var(--primary); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background-color: var(--primary); }
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url('images/hero_cafe_bg.jpg') center/cover no-repeat;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(20, 10, 5, 0.8) 0%, rgba(20, 10, 5, 0.4) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 650px;
+    color: var(--secondary);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-weight: 600;
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--secondary);
+    margin-bottom: 24px;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease 0.4s both;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-weight: 300;
+    animation: fadeInUp 1s ease 0.6s both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.8s both;
+  }
+
+  /* Review Floating Card */
+  .floating-card {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    background: rgba(253, 249, 241, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 16px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
+  }
+
+  .floating-card .rating-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .floating-card .rating-details p {
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .floating-card .stars {
+    color: #FFC107;
+    font-size: 0.9rem;
+  }
+
+  @media(max-width: 768px) {
+    .floating-card { display: none; }
+  }
+
+  /* Feature Strip */
+  .feature-strip {
+    background-color: var(--primary);
+    padding: 40px 0;
+    color: var(--secondary);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  .feature-item h3 {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .feature-item p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .section-title span {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .section-title h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* Popular Items */
+  .popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+  }
+  
+  .card-img {
+    height: 250px;
+    overflow: hidden;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .card:hover .card-img img {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    padding: 24px;
+  }
+  .card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .card-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-price {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Menu Section */
+  .menu-section {
+    background-color: #fff;
+  }
+  
+  .menu-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .search-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .search-input {
+    width: 100%;
+    padding: 16px 20px 16px 48px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--secondary);
+    transition: all 0.3s ease;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 123, 54, 0.1);
+  }
+  .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    width: 20px;
+    height: 20px;
+  }
+
+  .category-pills {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+  .category-pills::-webkit-scrollbar { display: none; } /* Chrome */
+  
+  .pill {
+    padding: 10px 24px;
+    background-color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    white-space: nowrap;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .pill:hover, .pill.active {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+  }
+
+  .menu-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  .menu-category-title {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .menu-sub-title {
+    grid-column: 1 / -1;
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-top: 10px;
+  }
+  .menu-sub-note {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: -5px;
+  }
+
+  .menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px;
+    background: var(--secondary);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+  }
+  .menu-item-row:hover {
+    transform: scale(1.02);
+  }
+  
+  .item-info h4 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .item-info p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  .item-price {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-left: 16px;
+    text-align: right;
+  }
+  .item-price span {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 400;
+  }
+
+  /* Variant Table */
+  .variant-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  .variant-table th {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+    text-align: right;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .variant-table th:first-child { text-align: left; }
+  .variant-table td {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .variant-table td:first-child { font-weight: 500; font-size: 0.95rem; }
+  .variant-table td:not(:first-child) {
+    text-align: right;
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .about-image {
+    flex: 1;
+    position: relative;
+  }
+  .about-image img {
+    border-radius: 20px;
+    box-shadow: -20px 20px 0 var(--accent);
+  }
+  .about-content {
+    flex: 1;
+  }
+  .about-content h2 { margin-bottom: 24px; }
+  .about-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+  }
+  .badges {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .badge {
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .badge svg { width: 16px; height: 16px; color: var(--accent); }
+
+  @media(max-width: 991px) {
+    .about-section { flex-direction: column; }
+    .about-image img { box-shadow: -10px 10px 0 var(--accent); }
+  }
+
+  /* Gallery */
+  .gallery-section {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+  .gallery-section .section-title h2, .gallery-section .section-title span { color: var(--secondary); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.1); }
+
+  /* Reviews */
+  .reviews-section { background-color: #fff; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  .review-card {
+    background: var(--secondary);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .review-stars {
+    color: #FFC107;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  .review-card p {
+    font-size: 1.05rem;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .review-author {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* Location */
+  .location-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .location-info h2 { margin-bottom: 30px; }
+  .info-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .info-item h4 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .info-item p { color: var(--text-light); }
+  
+  .hours-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  }
+  .hours-box h3 { margin-bottom: 24px; }
+  .hour-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .hour-row:last-child { border: none; }
+  .status-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .status-open { background-color: #E8F5E9; color: #2E7D32; }
+  .status-closed { background-color: #FFEBEE; color: #C62828; }
+
+  @media(max-width: 991px) {
+    .location-section { grid-template-columns: 1fr; }
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 80px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .footer-brand {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .footer-col h4 {
+    color: var(--accent);
+    font-family: var(--font-body);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  .footer-col ul li { margin-bottom: 12px; }
+  .footer-col ul li a { opacity: 0.8; }
+  .footer-col ul li a:hover { opacity: 1; color: var(--accent); }
+  .footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+
+  @media(max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Mobile Action Bar */
+  .mobile-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+    z-index: 100;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--text-dark);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 12px;
+    background: var(--secondary);
+  }
+  .action-btn.primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .action-btn svg { width: 20px; height: 20px; }
+
+  @media(min-width: 768px) {
+    .mobile-action-bar { display: none; }
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Utility classes for JS search hide */
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Cafe Grande</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+      </nav>
+      <a href="tel:07010615554" class="btn btn-primary nav-cta">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+        Call Now
+      </a>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-subtitle">Premium Cafe in Udumalpet</div>
+        <h1>Good Food. Good Taste. Good Mood.</h1>
+        <p>Delicious food, refreshing drinks and indulgent desserts in the heart of Udumalpet. Experience continental cuisine crafted for the perfect dining moment.</p>
+        <div class="hero-ctas">
+          <a href="#menu" class="btn btn-primary">View Menu</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Grande%2C%20Taj%20Complex%2C%2028%2F3%2C%20Udumalpet%20-%20Dharapuram%20Rd%2C%20Udumalaipettai%2C%20Tamil%20Nadu%20642126" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Directions</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="floating-card">
+      <div class="rating-number">4.7</div>
+      <div class="rating-details">
+        <div class="stars">★★★★★</div>
+        <p>Based on 60 Reviews</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Strip -->
+  <section class="feature-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>4.7 ★</h3>
+          <p>Google Rating</p>
+        </div>
+        <div class="feature-item">
+          <h3>60+</h3>
+          <p>Happy Reviews</p>
+        </div>
+        <div class="feature-item">
+          <h3>₹1–200</h3>
+          <p>Affordable Pricing</p>
+        </div>
+        <div class="feature-item">
+          <h3>3 Ways</h3>
+          <p>Dine-in • Pickup • Delivery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Items -->
+  <section class="section-padding" id="popular">
+    <div class="container">
+      <div class="section-title">
+        <span>Signature Dishes</span>
+        <h2>What's Popular</h2>
+      </div>
+      <div class="popular-grid">
+        
+        <div class="card">
+          <div class="card-img"><img src="images/food_maggi.jpg" alt="Double Masala Veg Maggi"></div>
+          <div class="card-content">
+            <h3>Double Masala Veg Maggi</h3>
+            <p>Our famous spicy, colorful veg maggi loaded with double masala for that perfect kick.</p>
+            <div class="card-price">₹59</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img"><img src="images/food_waffle.jpg" alt="Bubblegum Waffle"></div>
+          <div class="card-content">
+            <h3>Bubblegum Waffle</h3>
+            <p>A vibrant, fun waffle loaded with sweet cream and colorful bubblegum flavored toppings.</p>
+            <div class="card-price">₹119</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img"><img src="images/food_pasta.jpg" alt="Mixed Sauce Pasta"></div>
+          <div class="card-content">
+            <h3>Mixed Sauce Pasta</h3>
+            <p>The perfect blend of red and white sauces mixed with al dente pasta and herbs.</p>
+            <div class="card-price">₹119</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img"><img src="images/food_wrap.jpg" alt="Egg Wrap"></div>
+          <div class="card-content">
+            <h3>Egg Wrap</h3>
+            <p>A warm, freshly made wrap stuffed with flavorful egg and fresh veggies.</p>
+            <div class="card-price">₹89</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Menu -->
+  <section class="section-padding menu-section" id="menu">
+    <div class="container">
+      <div class="section-title">
+        <span>Our Offerings</span>
+        <h2>Explore The Menu</h2>
+      </div>
+
+      <div class="menu-controls">
+        <div class="search-wrapper">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" id="menu-search" class="search-input" placeholder="Search the menu... (e.g. pizza, waffle, coffee)">
+        </div>
+
+        <div class="category-pills" id="category-pills">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="menu-display" id="menu-display">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="about-section">
+        <div class="about-image">
+          <img src="images/about_cafe.jpg" alt="Cafe Grande Interior">
+        </div>
+        <div class="about-content">
+          <div class="section-title" style="text-align: left;">
+            <span>Our Story</span>
+            <h2>About Cafe Grande</h2>
+          </div>
+          <p>Cafe Grande is a premium destination in Udumalpet offering a wide variety of food, beverages, and desserts. Whether you're craving a quick bite, a comforting pasta, or an indulgent dessert, we've crafted a menu that caters to every mood.</p>
+          <p>Enjoy our welcoming, warm ambience perfect for dining in with friends and family, or take advantage of our convenient kerbside pickup and reliable delivery services.</p>
+          
+          <div class="badges">
+            <div class="badge">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Affordable Pricing
+            </div>
+            <div class="badge">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Quality Food
+            </div>
+            <div class="badge">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Great Ambience
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section-padding gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <span>Visuals</span>
+        <h2>A Little Taste of Cafe Grande</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/food_burger.jpg" alt="Chicken Burger"></div>
+        <div class="gallery-item"><img src="images/food_pasta.jpg" alt="Pasta"></div>
+        <div class="gallery-item"><img src="images/drink_mojito.jpg" alt="Blue Mojito"></div>
+        <div class="gallery-item"><img src="images/food_maggi.jpg" alt="Maggi"></div>
+        <div class="gallery-item"><img src="images/food_waffle.jpg" alt="Waffle"></div>
+        <div class="gallery-item"><img src="images/food_wrap.jpg" alt="Wrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section-padding reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <span>Testimonials</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="reviews-grid">
+        
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"We had mixed sauce pasta and egg wrap which was good... Good place for such food items in udumalpet area. Price is also reasonable and the quantity is also good."</p>
+          <div class="review-author">- Rathika Ragupathi</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"More dish varieties! Reasonable price! Good taste!"</p>
+          <div class="review-author">- Manisagar</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Delicious and good ambience. Keep up and maintain the taste"</p>
+          <div class="review-author">- Vijayan Ramanathan</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours -->
+  <section class="section-padding" id="location">
+    <div class="container">
+      <div class="location-section">
+        <div class="location-info">
+          <div class="section-title" style="text-align: left;">
+            <span>Visit Us</span>
+            <h2>Find Cafe Grande</h2>
+          </div>
+          
+          <div class="info-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <div>
+              <h4>Address</h4>
+              <p>Taj Complex, 28/3, Udumalpet - Dharapuram Rd,<br>Opposite MP Lodge, Udumalaipettai,<br>Tamil Nadu 642126</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <div>
+              <h4>Contact</h4>
+              <p>070106 15554</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <div>
+              <h4>Services</h4>
+              <p>Dine-in • Kerbside pickup • Delivery</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Grande%2C%20Taj%20Complex%2C%2028%2F3%2C%20Udumalpet%20-%20Dharapuram%20Rd%2C%20Udumalaipettai%2C%20Tamil%20Nadu%20642126" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Directions</a>
+            <a href="https://wa.me/917010615554?text=Hi%20Cafe%20Grande%2C%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">WhatsApp Us</a>
+          </div>
+
+        </div>
+
+        <div class="hours-box">
+          <h3>Opening Hours</h3>
+          <div class="hour-row">
+            <span>Monday - Saturday</span>
+            <strong>12:00 PM - 10:00 PM</strong>
+          </div>
+          <div class="hour-row">
+            <span>Sunday</span>
+            <strong>4:00 PM - 10:00 PM</strong>
+          </div>
+          
+          <div id="live-status" class="status-badge">Checking status...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Cafe Grande</div>
+          <p style="opacity: 0.8;">Good Food. Good Taste. Good Mood.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:07010615554">070106 15554</a></li>
+            <li><a href="https://wa.me/917010615554?text=Hi%20Cafe%20Grande%2C%20I%20would%20like%20to%20know%20more%20about%20your%20menu.">WhatsApp</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Grande%2C%20Taj%20Complex%2C%2028%2F3%2C%20Udumalpet%20-%20Dharapuram%20Rd%2C%20Udumalaipettai%2C%20Tamil%20Nadu%20642126" target="_blank" rel="noopener noreferrer">Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Address</h4>
+          <p style="opacity: 0.8;">Taj Complex, 28/3,<br>Udumalpet - Dharapuram Road,<br>Udumalaipettai,<br>Tamil Nadu 642126</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cafe Grande. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:07010615554" class="action-btn">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+      Call
+    </a>
+    <a href="https://wa.me/917010615554?text=Hi%20Cafe%20Grande%2C%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" rel="noopener noreferrer" class="action-btn primary">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.976L2 22l5.187-1.359a9.995 9.995 0 004.823 1.246c5.503 0 9.988-4.479 9.988-9.985S17.518 2 12.012 2zm.014 16.732c-1.42 0-2.812-.379-4.03-1.1l-.289-.17-2.997.786.799-2.92-.187-.298a8.318 8.318 0 01-1.272-4.444c.002-4.606 3.75-8.354 8.359-8.354 2.233.001 4.332.87 5.91 2.45s2.448 3.676 2.447 5.908c-.001 4.608-3.75 8.356-8.355 8.356v-.002zm4.582-6.26c-.251-.126-1.488-.735-1.718-.818-.23-.084-.398-.126-.566.126-.168.251-.649.818-.795.986-.147.168-.293.188-.544.063-.251-.126-1.06-.391-2.02-1.248-.747-.667-1.252-1.492-1.399-1.744-.147-.251-.016-.388.11-.513.113-.113.251-.293.377-.44.126-.147.168-.251.251-.419.084-.168.042-.314-.021-.44-.063-.126-.566-1.362-.776-1.865-.205-.49-.413-.424-.566-.432-.147-.007-.314-.007-.482-.007s-.44.063-.67.314c-.23.251-.88 .86-1.129 1.489-.251.629-.251 1.635 0 2.264.251.629.88 1.489 1.34 2.118.063.084.44.693 1.026 1.446 2.219 2.85 2.659 3.25 3.33 3.628.712.4 1.36.42 1.905.336.6-.093 1.488-.608 1.697-1.195.21-.587.21-1.09.147-1.195-.063-.105-.23-.168-.482-.294z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Grande%2C%20Taj%20Complex%2C%2028%2F3%2C%20Udumalpet%20-%20Dharapuram%20Rd%2C%20Udumalaipettai%2C%20Tamil%20Nadu%20642126" target="_blank" rel="noopener noreferrer" class="action-btn">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+      Directions
+    </a>
+  </div>
+
+  <script>
+    // Navigation Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Live Hours Logic
+    function updateStatus() {
+      const statusEl = document.getElementById('live-status');
+      const now = new Date();
+      // Use local time for the restaurant (assuming IST)
+      const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: 'numeric', minute: 'numeric', weekday: 'long' };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const parts = formatter.formatToParts(now);
+      
+      let day = '';
+      let hour = 0;
+      let min = 0;
+      
+      parts.forEach(p => {
+        if(p.type === 'weekday') day = p.value;
+        if(p.type === 'hour') hour = parseInt(p.value);
+        if(p.type === 'minute') min = parseInt(p.value);
+      });
+
+      const currentMinutes = hour * 60 + min;
+      
+      let openMin, closeMin = 22 * 60; // 10:00 PM
+      if (day === 'Sunday') {
+        openMin = 16 * 60; // 4:00 PM
+      } else {
+        openMin = 12 * 60; // 12:00 PM
+      }
+
+      if (currentMinutes >= openMin && currentMinutes < closeMin) {
+        statusEl.textContent = 'OPEN NOW (Until 10:00 PM)';
+        statusEl.className = 'status-badge status-open';
+      } else {
+        const nextOpenTime = (day === 'Saturday') ? '4:00 PM tomorrow' : (currentMinutes < openMin ? (day === 'Sunday' ? '4:00 PM today' : '12:00 PM today') : (day === 'Sunday' ? '12:00 PM tomorrow' : '12:00 PM tomorrow'));
+        
+        statusEl.textContent = 'CLOSED (Opens at ' + nextOpenTime + ')';
+        statusEl.className = 'status-badge status-closed';
+      }
+    }
+    updateStatus();
+    setInterval(updateStatus, 60000); // Update every minute
+
+    // Menu Data
+    const MENU = [
+      {
+        id:"pizza", label:"Pizza",
+        subs:[
+          {
+            title:"Classic Pizza",
+            note:"Extra cheese ₹40 · Extra veggies ₹30",
+            items:[
+              ["Margherita Pizza","Plain pizza with 100% mozzarella cheese",159],
+              ["Double Cheese Margherita","Lot of mozzarella cheese",189],
+              ["Cheese n Corn","Mozzarella cheese & American corn",169],
+              ["Farmer's Market","Onion & capsicum",179],
+              ["O.T.C Pizza","Onion / tomato / capsicum",189],
+              ["Onion Blossoms","Onion / tomato & American corn",189],
+              ["Veggie Paradise","American corn / capsicum & red paprika",189],
+              ["Spicy Tango","Red paprika / jalapeno / capsicum & American corn",199],
+              ["Veg Delight","Onion / capsicum / American corn & tomato",199],
+              ["Spicy Delight","Jalapeno / American corn / capsicum & onion",199],
+              ["Mexican Spicy","Onion / tomato / capsicum / red paprika & jalapeno",199],
+              ["Hot 4 Pepper","Capsicum / red paprika / jalapeno & green chilly",199],
+              ["Peppy Paneer","Red paprika / onion / capsicum & paneer",219],
+              ["Spring Veg","Paneer / tomato / capsicum & American corn",219]
+            ]
+          },
+          {
+            title:"Specialty Veg Pizza",
+            items:[
+              ["Supreme Veg","Onion / capsicum / American corn / tomato / red paprika & jalapeno",219],
+              ["Paneer Delight","Paneer / onion / capsicum & American corn",229],
+              ["Tandoori Paneer","Marinated paneer / onion / capsicum / American corn & tandoori saucing",229],
+              ["Chicago","Black olives / American corn / paneer & capsicum",239],
+              ["Veg Passions","Black olives / onion / tomato / American corn / paneer",249],
+              ["Paneer Special","Double paneer / onion / capsicum & red paprika",259],
+              ["CG Special","Onion / tomato / capsicum / American corn / red paprika / olives & jalapeno, extra cheese",279]
+            ]
+          },
+          {
+            title:"Specialty Chicken Pizza",
+            note:"Extra cheese ₹40 · Extra veggies ₹30",
+            items:[
+              ["Chicken Golden Delight","Fried chicken cubes & golden corn",199],
+              ["Chicken Delight","Chicken / onion / capsicum & tomato",229],
+              ["Supreme Chicken","Chicken cubes / onion / capsicum / tomato & jalapeno",239],
+              ["Spicy Chicken","Spicy chicken / onion / red paprika & jalapeno",249],
+              ["Chicken Fiesta","Onion / capsicum / chicken sausages & spicy chicken / jalapeno / olives",269],
+              ["Exotic Chicken","Spicy chicken sausages / onion / capsicum / tomato / jalapeno / red paprika & olives",289]
+            ]
+          }
+        ]
+      },
+      {
+        id:"momos", label:"Momos & Fried Chicken",
+        subs:[
+          {
+            title:"Momos (6 pcs)",
+            note:"Fried momos +₹10",
+            items:[
+              ["Mix Veg Momos","",79],["Veg Schezwan Momos","",89],["Paneer Momos","",99],
+              ["Veg Cheese Corn Momos","",109],["Paneer Tikka Momos","",109],
+              ["Chicken Momos","",89],["Chicken Schezwan Momos","",99],
+              ["Chicken Peri Peri Momos","",99],["Chicken Tikka Momos","",99],["Chicken Cheese Momos","",109]
+            ]
+          },
+          {
+            title:"Pan Tossed Momos (7 pcs)", isVariant:true,
+            variantLabels:["Veg / Soya","Chicken","Paneer"],
+            items:[
+              ["Korean Hot Chilli Pan Tossed",119,129,139],
+              ["Dragon Tibet Saucy Pan Tossed",119,129,139],
+              ["Burnt Chilli Garlic Pan Tossed",119,129,139],
+              ["Korean Sweet Chilli Pan Tossed",119,129,139],
+              ["Mangolian Hot Pepper Pan Tossed",119,129,139],
+              ["Smoked Hoisin Pan Tossed",119,129,139]
+            ]
+          },
+          {
+            title:"Crispy Chicken",
+            items:[
+              ["Crispy Chicken Popcorn","100 gm",119],["Crispy Chicken Bites","100 gm",119],
+              ["Crispy Chicken Lollipop","4 pcs",119],["Crispy Chicken Wings","4 pcs",119],
+              ["Boneless Chicken Strips","4 pcs",119],["Crispy Chicken Leg","2 pcs",159]
+            ]
+          },
+          {
+            title:"Saucy / Pan Tossed Fried Wings, Strips, Bites & Lollipop",
+            note:"All flavours ₹169",
+            items:[
+              ["Jamaican Saucy Pan Tossed","",169],["Teriyaki Sauce Pan Tossed","",169],
+              ["Korean Hot Chilli Pan Tossed","",169],["Dragon Tibet Saucy Pan Tossed","",169],
+              ["Burnt Chilli Garlic Pan Tossed","",169],["Korean Sweet Chilli Pan Tossed","",169],
+              ["Mangolian Hot Pepper Pan Tossed","",169],["Smoked Hoisin Pan Tossed","",169]
+            ]
+          }
+        ]
+      },
+      {
+        id:"sandwich", label:"Sandwich, Wrap & Rolls",
+        subs:[
+          {
+            title:"Sandwich",
+            note:"Extra cheese ₹20 · Combo = small fries + any ₹69 mojito",
+            items:[
+              ["Veg Sandwich","",69,139],["Peri Peri Veg Sandwich","",79,149],
+              ["Corn Sandwich","",89,159],["Chilli Cheese Veg Sandwich","",89,159],
+              ["Paneer Sandwich","",99,169],["Tandoori Paneer Sandwich","",109,179],
+              ["Schezwan Paneer Sandwich","",109,179],["Veg Club Sandwich","Triple layer",119,189],
+              ["Chocolate Sandwich","Triple layer",119,189],["Paneer Club Sandwich","Triple layer",149,219],
+              ["Chicken Sandwich","",89,159],["Chicken Tikka Sandwich","",99,169],
+              ["Mexican Chicken Sandwich","",99,169],["Peri Peri Chicken Sandwich","",99,169],
+              ["Schezwan Chicken Sandwich","",99,169],["Chicken Nugget Sandwich","",119,189],
+              ["Chicken Club Sandwich","",139,209]
+            ], hasCombo:true
+          },
+          {
+            title:"Wrap",
+            note:"Extra cheese ₹20",
+            items:[
+              ["Veggie Wrap","",79],["Egg Wrap","",89],["Spicy Mexican Wrap","",89],
+              ["Corn Wrap","",99],["Paneer Wrap","",119],["Tandoori Paneer Wrap","",129],
+              ["Chicken Wrap","",119],["Mexican Chicken Wrap","",129],["Peri Peri Chicken Wrap","",129],
+              ["Schezwan Chicken Wrap","",129],["Chicken Tikka Wrap","",139]
+            ]
+          },
+          {
+            title:"Bread Omlette",
+            items:[["Bread Omlette Veggie","",69],["Special Bread Omlette","",79]]
+          }
+        ]
+      },
+      {
+        id:"burger", label:"Burger, Maggi & Pasta",
+        subs:[
+          {
+            title:"Burger",
+            note:"Add cheese ₹20 · Combo = small fries + any ₹69 mojito",
+            items:[
+              ["Veg Patty Burger","",89,159],["Double Decker Veggie Burger","",109,179],
+              ["Veg Nugget Burger","",109,179],["Paneer Patty Burger","",109,179],
+              ["Chilli Cheese Burger","",119,189],["BBQ Cheese Burger","",129,199],
+              ["Hickory BBQ Cheese Burger","",129,199],["Chicken Patty Burger","",99,169],
+              ["Chicken Nugget Burger","",119,189],["Chicken Popcorn Burger","",129,199],
+              ["BBQ Cheese Chicken Burger","",139,209],["Hickory BBQ Chicken Cheese Burger","",139,209],
+              ["Fried Chicken Burger","",149,219],["Double Decker Fried Chicken Burger","",189,259]
+            ], hasCombo:true
+          },
+          {
+            title:"Maggi",
+            note:"Add cheese ₹20",
+            items:[
+              ["Veg Maggi","",59],["Egg Maggi","",69],["Veg Sweetcorn Maggi","",69],
+              ["Chicken Maggi","",99],["Veg Momo Maggi","",89],["Paneer Momo Maggi","",129],
+              ["Chicken Momo Maggi","",129]
+            ]
+          },
+          {
+            title:"Pasta",
+            note:"Add cheese ₹20 · Add chicken ₹60 · Add scramble egg extra",
+            items:[
+              ["Macaroni Pasta","",109],["Red Sauce Pasta","",109],["Mixed Sauce Pasta","",119],
+              ["White Sauce Pasta","",129],["Tandoori Sauce Pasta","",129],["Mac & Cheese Pasta","",169],
+              ["Red Sauce Spaghetti Pasta","",159],["Pink Sauce Spaghetti Pasta","",169],
+              ["White Sauce Spaghetti Pasta","",179]
+            ]
+          }
+        ]
+      },
+      {
+        id:"quickbites", label:"Quick Bites",
+        subs:[
+          {
+            title:"Veg",
+            items:[
+              ["Corn Samosa","4 pcs",65],["Paneer Samosa","4 pcs",70],["Chocolate Samosa","2 pcs",70],
+              ["Veg Spring Roll","4 pcs",60],["Kitty Schezwan Roll","5 pcs",75],["Paneer Roll","4 pcs",70],
+              ["Veg Cutlet","3 pcs",50],["Potato Cheese Ball","8 pcs",70],["Chilli Garlic Potato Pops","20 pcs",85],
+              ["Cheese Corn Nuggets","5 pcs",70],["Veggie Fingers","5 pcs",75],["Veg Nuggets","6 pcs",75],
+              ["Veg Lollipop","4 pcs",70],["Potato Wedges","",60],["Crunchy Pizza","2 pcs",100]
+            ]
+          },
+          {
+            title:"Non-Veg",
+            items:[
+              ["Chicken Rings","5 pcs",85],["Chicken Samosa","3 pcs",60],["Chicken Cutlet","2 pcs",60],
+              ["Chicken Spring Roll","3 pcs",60],["Chicken Nuggets","5 pcs",80],["Chicken Cheese Ball","5 pcs",90],
+              ["Chicken Pops","12 pcs",90],["Chicken Finger","5 pcs",90],["Fish Finger","4 pcs",110]
+            ]
+          },
+          {
+            title:"French Fries",
+            items:[
+              ["Classic Fries","",79],["Mexican Fries","",89],["Lemon Chilli Fries","",89],
+              ["Tandoori Fries","",99],["Chilli Garlic Fries","",99],["Peri Peri Fries","",99],
+              ["Korean Chilli Cheese Fries","",119],["Roasted Chilli & Garlic Cheese Fries","",119],
+              ["American Ranch Cheese Fries","",119],["Schezwan Cheese Fries","",139],
+              ["BBQ Cheese Fries","",139],["Peri Peri Fried Chicken Cheese Fries","",169],
+              ["BBQ Fried Chicken Cheese Fries","",169],["Chicken Popcorn Cheese Fries","",199]
+            ]
+          }
+        ]
+      },
+      {
+        id:"waffles", label:"Waffles & Sweet Bowls",
+        subs:[
+          {
+            title:"Waffle",
+            note:"Belgian chocolate base +₹15 · Bourbon black chocolate base +₹15 · Red velvet base +₹20",
+            items:[
+              ["Belgian Chocolate","Vegan",99],["Milk Chocolate","",99],["White Chocolate","",99],
+              ["Dark & White Fantasy","",109],["Crunchy Coffee Mocha","",109],["Cookies N Cream","",109],
+              ["Triple Chocolate","",119],["Dark Chocolate","Vegan",119],["Bubblegum","",119],
+              ["Almond White Choco Butter","",119],["Crunchy Almond Milk Choco","",119],
+              ["Chocolate Butterscotch","",119],["Orange","",119],["Mawa Malai","",129],
+              ["Bourbon Whisky","flavour, non-alcoholic",129],["Rasmalai Pistachio","",129],
+              ["Crunchy Red Velvet Cheese Cream","",139],["Crunchy Bourbon Black Choco","",139],
+              ["Cotton Candy","",139],["Naughty Nutella","",159]
+            ]
+          },
+          {
+            title:"Toppings",
+            note:"Add to any waffle or pancake",
+            items:[
+              ["Sprinkles","",10],["Rainbow Balls","",10],["Oreo","",10],["Gems","",15],
+              ["Kit Kat","",15],["Choco Chips","",20],["Nuts","",30],["Ice Cream","",30]
+            ]
+          },
+          {
+            title:"Mini Pan Cake",
+            items:[
+              ["Yummy Caramel","",99],["Crunchy Butterscotch","",109],["Milk Chocolate","",119],
+              ["White Chocolate","",119],["Dark Chocolate","",129],["Double Chocolate Burst","",129],
+              ["Triple Chocolate","",139],["Oreo Crush","",149],["KitKat Bits","",149],["Nutella Forever","",169]
+            ]
+          },
+          {
+            title:"Bubble Waffle Bowl",
+            items:[
+              ["Choco Stick Bowl","Bubble waffle + stick waffle + chocolate cake bites + milk chocolate drizzle + gems + crushed Oreo",160],
+              ["Cake Crumble Bowl","Bubble waffle + chocolate cake bites + dark chocolate drizzle + gems + sprinkles + choco chips",170],
+              ["Oreo Dream Bowl","Bubble waffle + crushed Oreo + white chocolate drizzle + chocolate cake bites + sprinkles",180],
+              ["Candy Pop Bowl","Bubble waffle + white chocolate drizzle + gems + chocolate cake bites + rainbow sprinkles",180],
+              ["Triple Choco Bowl","Bubble waffle + milk, white & dark chocolate drizzle + choco chips + brownie chunks",190],
+              ["Choco Overloaded Bowl","Bubble waffle + milk chocolate drizzle + brownie chunks + choco chips + chocolate syrup",190],
+              ["Brownie Bomb Bowl","Bubble waffle + dark chocolate drizzle + brownie chunks + nuts + choco chips",190],
+              ["Ice Cream Magic Bowl","Bubble waffle + your choice of ice cream + chocolate syrup + choco chips",199]
+            ]
+          }
+        ]
+      },
+      {
+        id:"desserts", label:"Desserts & Falooda",
+        subs:[
+          {
+            title:"Falooda",
+            items:[
+              ["Vanilla Falooda","",99],["Rose Falooda","",99],["Pista Falooda","",109],
+              ["Chocolate Falooda","",119],["Mango Passion Falooda","",129],["Mixed Falooda","",129],
+              ["Black Currant Falooda","",139],["Kulfi Falooda","",149],["Cookies & Cream Falooda","",159],
+              ["Dry Fruits Falooda","",179]
+            ]
+          },
+          {
+            title:"Desserts",
+            items:[
+              ["Choco Lava Cake","",69],["Chocolate Brownie","",59],["Brownie With Ice Cream","",89],
+              ["Death By Chocolate Brownie","",119],["Double Cream Kunafa","",270],
+              ["Mozzarella Cheese Kunafa","ask in-store for today's price",null],["Chocolate Kunafa","",290]
+            ]
+          }
+        ]
+      },
+      {
+        id:"drinks", label:"Beverages & Ice Cream",
+        subs:[
+          {
+            title:"Mojito",
+            items:[
+              ["Classic Mojito","",69],["Grenadine","",69],["Ginger & Lime","",69],["Green Mint","",69],
+              ["Blue Curacao","",69],["Strawberry","",69],["Watermelon","",69],["Pine Colda","",79],
+              ["Blood Orange","",79],["Red Curacao","",79],["Passion Fruit","",79],["Mango","",79],
+              ["Black Currant","",79],["Lychee","",89],["Raspberry","",89],["Kiwi","",89],
+              ["Kala Khatta / Jeera Masala","",89],["Peach","",99],["Tropical Fruit Beer","",99],["Blueberry","",99]
+            ]
+          },
+          {
+            title:"Thick Milkshake",
+            items:[
+              ["Vanilla","",79],["Chocolate","",89],["Strawberry","",89],["Pista","",89],["Oreo","",89],
+              ["Pineapple","",99],["Kesar Pista","",99],["Butterscotch","",99],["Tender Coconut","",99],
+              ["Jackfruit","",99],["Kit Kat","",99],["Black Currant","",99],["Alponsa Mango","",99],
+              ["Fig Shoney","",99],["Kiwi","",99],["Orange","",99],["Lychee","",99],["Green Apple","",99],
+              ["Grape","",99],["Passion Fruit","",99],["Kulfi","",119],["Blueberry","",119],
+              ["Cream & Cookies","",129],["Rajbhog","",129],["Browine Blast","",139]
+            ]
+          },
+          {
+            title:"Cold Coffee",
+            items:[
+              ["Cold Coffee","",69],["Cold Coffee with Ice Cream","",99],["Cold Boost","",79],
+              ["Oreo Cold Coffee","",79],["Cold Coffee with Brownie","",129],
+              ["Caramel Cold Coffee","Milk",89],["Irish Cream Cold Coffee","Milk",89]
+            ]
+          },
+          {
+            title:"Smoothie, Frappe & Ice Tea",
+            items:[
+              ["Mango Smoothie","",99],["Mix Fruit Smoothie","",99],
+              ["Vanilla Frappe","",79],["Chocolate Frappe","",89],["Coffee Frappe","",89],
+              ["Red Velvet Frappe","",99],["Cookies & Cream Frappe","",99],
+              ["Peach Ice Tea","",79],["Lemon Ice Tea","",79]
+            ]
+          },
+          {
+            title:"Special Beverages & Fresh Juice",
+            items:[
+              ["Rose Milk","",49],["Badam Milk","",59],["Lime Soda","Salt",29],
+              ["Lime Juice / Nannari Sharbat","",29],["Soda Sharbat","Sweet",39],["Cooler Sharbat","",39],
+              ["Fruit Sharbat","",39],["Thandai Sharbat","Milk",79],["Fresh Juice","Seasonal fruits",null]
+            ]
+          },
+          {
+            title:"Hot Beverages",
+            items:[
+              ["Tea","",15],["Coffee","",20],["Lemon Tea","",15],["Hot Milk","",15],["Black Tea","",10],
+              ["Black Coffee","",10],["Horlicks / Boost","",20],["Hot Badam Milk","",40],["Hot Chocolate","",50]
+            ]
+          },
+          {
+            title:"Ice Cream",
+            items:[
+              ["Vanilla","",49],["Strawberry","",49],["Plain Pista","",59],["Chocolate","",69],
+              ["Alponsa Mango","",69],["Butterscotch","",69],["Black Currant","",79],["Jackfruit","",79],
+              ["Tender Coconut","",79],["Fig Shoney","",89],["Kulfi","",99],["Cream & Cookies","",109],
+              ["Rajbhog","",109]
+            ]
+          }
+        ]
+      }
+    ];
+
+    function formatPrice(n) {
+      return n === null ? "" : "₹" + n;
+    }
+
+    let activeCategory = MENU[0].id;
+
+    function buildMenuUI() {
+      const pillsContainer = document.getElementById('category-pills');
+      const displayContainer = document.getElementById('menu-display');
+      
+      pillsContainer.innerHTML = '';
+      
+      MENU.forEach(cat => {
+        // Build Pills
+        const pill = document.createElement('button');
+        pill.className = `pill ${cat.id === activeCategory ? 'active' : ''}`;
+        pill.textContent = cat.label;
+        pill.onclick = () => {
+          activeCategory = cat.id;
+          buildMenuUI();
+          document.getElementById('menu-search').value = '';
+          applySearch('');
+        };
+        pillsContainer.appendChild(pill);
+      });
+
+      renderCategoryContent(displayContainer, activeCategory);
+    }
+
+    function renderCategoryContent(container, catId) {
+      container.innerHTML = '';
+      const cat = MENU.find(c => c.id === catId);
+      
+      const catTitle = document.createElement('h3');
+      catTitle.className = 'menu-category-title';
+      catTitle.textContent = cat.label;
+      container.appendChild(catTitle);
+
+      cat.subs.forEach(sub => {
+        const subTitle = document.createElement('h4');
+        subTitle.className = 'menu-sub-title';
+        subTitle.textContent = sub.title;
+        container.appendChild(subTitle);
+
+        if (sub.note) {
+          const subNote = document.createElement('p');
+          subNote.className = 'menu-sub-note';
+          subNote.textContent = sub.note;
+          container.appendChild(subNote);
+        }
+
+        if (sub.isVariant) {
+          const tableContainer = document.createElement('div');
+          tableContainer.style.gridColumn = "1 / -1";
+          
+          let tableHtml = `<table class="variant-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>${sub.variantLabels[0]}</th>
+                <th>${sub.variantLabels[1]}</th>
+                <th>${sub.variantLabels[2]}</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+          
+          sub.items.forEach(it => {
+            tableHtml += `
+              <tr class="searchable-item" data-name="${it[0].toLowerCase()}">
+                <td>${it[0]}</td>
+                <td>${formatPrice(it[1])}</td>
+                <td>${formatPrice(it[2])}</td>
+                <td>${formatPrice(it[3])}</td>
+              </tr>
+            `;
+          });
+          
+          tableHtml += `</tbody></table>`;
+          tableContainer.innerHTML = tableHtml;
+          container.appendChild(tableContainer);
+        } else {
+          sub.items.forEach(it => {
+            const [name, desc, price, combo] = it;
+            const itemRow = document.createElement('div');
+            itemRow.className = 'menu-item-row searchable-item';
+            itemRow.dataset.name = name.toLowerCase() + " " + (desc ? desc.toLowerCase() : "");
+            
+            let priceHtml = formatPrice(price);
+            if (sub.hasCombo && combo) {
+              priceHtml += ` <span>+ combo ${formatPrice(combo)}</span>`;
+            }
+
+            itemRow.innerHTML = `
+              <div class="item-info">
+                <h4>${name}</h4>
+                ${desc ? `<p>${desc}</p>` : ''}
+              </div>
+              <div class="item-price">${priceHtml}</div>
+            `;
+            container.appendChild(itemRow);
+          });
+        }
+      });
+    }
+
+    // Initial build
+    buildMenuUI();
+
+    // Search functionality
+    const searchInput = document.getElementById('menu-search');
+    
+    function applySearch(query) {
+      if (!query) {
+        // If empty, restore current category
+        buildMenuUI();
+        return;
+      }
+
+      // If searching, show matching items from ALL categories
+      const displayContainer = document.getElementById('menu-display');
+      displayContainer.innerHTML = '';
+      
+      let matchFound = false;
+
+      MENU.forEach(cat => {
+        let catHasMatch = false;
+        const catContainer = document.createElement('div');
+        catContainer.style.display = 'contents';
+
+        const catTitle = document.createElement('h3');
+        catTitle.className = 'menu-category-title';
+        catTitle.textContent = cat.label;
+
+        cat.subs.forEach(sub => {
+          let subHasMatch = false;
+          const subContainer = document.createElement('div');
+          subContainer.style.display = 'contents';
+
+          const subTitle = document.createElement('h4');
+          subTitle.className = 'menu-sub-title';
+          subTitle.textContent = sub.title;
+
+          if (sub.isVariant) {
+            const tableContainer = document.createElement('div');
+            tableContainer.style.gridColumn = "1 / -1";
+            
+            let tableHtml = `<table class="variant-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>${sub.variantLabels[0]}</th>
+                  <th>${sub.variantLabels[1]}</th>
+                  <th>${sub.variantLabels[2]}</th>
+                </tr>
+              </thead>
+              <tbody>
+            `;
+            
+            let rowMatches = 0;
+            sub.items.forEach(it => {
+              if (it[0].toLowerCase().includes(query)) {
+                rowMatches++;
+                tableHtml += `
+                  <tr>
+                    <td>${it[0]}</td>
+                    <td>${formatPrice(it[1])}</td>
+                    <td>${formatPrice(it[2])}</td>
+                    <td>${formatPrice(it[3])}</td>
+                  </tr>
+                `;
+              }
+            });
+            tableHtml += `</tbody></table>`;
+            
+            if (rowMatches > 0) {
+              subHasMatch = true;
+              subContainer.appendChild(subTitle);
+              tableContainer.innerHTML = tableHtml;
+              subContainer.appendChild(tableContainer);
+            }
+          } else {
+            const itemsContainer = document.createElement('div');
+            itemsContainer.style.display = 'contents';
+            
+            sub.items.forEach(it => {
+              const [name, desc, price, combo] = it;
+              const searchStr = name.toLowerCase() + " " + (desc ? desc.toLowerCase() : "");
+              if (searchStr.includes(query)) {
+                subHasMatch = true;
+                const itemRow = document.createElement('div');
+                itemRow.className = 'menu-item-row';
+                
+                let priceHtml = formatPrice(price);
+                if (sub.hasCombo && combo) {
+                  priceHtml += ` <span>+ combo ${formatPrice(combo)}</span>`;
+                }
+
+                itemRow.innerHTML = `
+                  <div class="item-info">
+                    <h4>${name}</h4>
+                    ${desc ? `<p>${desc}</p>` : ''}
+                  </div>
+                  <div class="item-price">${priceHtml}</div>
+                `;
+                itemsContainer.appendChild(itemRow);
+              }
+            });
+
+            if (subHasMatch) {
+              subContainer.appendChild(subTitle);
+              subContainer.appendChild(itemsContainer);
+            }
+          }
+
+          if (subHasMatch) {
+            catHasMatch = true;
+            catContainer.appendChild(subContainer);
+          }
+        });
+
+        if (catHasMatch) {
+          matchFound = true;
+          displayContainer.appendChild(catTitle);
+          displayContainer.appendChild(catContainer);
+        }
+      });
+
+      if (!matchFound) {
+        displayContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-light); padding: 40px;">No items found matching your search.</p>';
+      }
+      
+      // Remove active pill state while searching
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      applySearch(query);
+    });
+
+  </script>
+</body>
+</html>
